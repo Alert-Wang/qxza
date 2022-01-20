@@ -35,14 +35,14 @@ class OrderController(object):
 
 
 if __name__ == '__main__':
-    controllor = OrderController()
+    controller = OrderController()
     orders = []
     for i in range(15):
         time.sleep(random.uniform(0.01, 0.1))
         orders.append(Order(datetime.datetime.now()))
     print(orders)
     for order in orders:
-        if controllor.allow(order):
+        if controller.allow(order):
             print('allow {}'.format(order))
         else:
             print('deny  {}'.format(order))
